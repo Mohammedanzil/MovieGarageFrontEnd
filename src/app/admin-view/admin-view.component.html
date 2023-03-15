@@ -1,0 +1,26 @@
+
+    <div class="section">
+        <h2 class="text-white">Welcome Admin: To the Admin Table</h2> 
+      <div class="btn btn-outline-warning my-4 " routerLink="/Click-On/Admin-add">Add New Movies</div>
+        <br>
+     <table  class="form-box" >
+            
+            <tr>
+              <th>No.</th>
+              <th>Movie Name</th>
+              <th>Director</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+            <tr *ngFor="let allfilms of allfilm ; let i=index">
+              <td>{{i+1}}</td>
+              <td>{{allfilms.movie}}</td>
+              <td>{{allfilms.dirc}}</td>
+              <td>{{allfilms.time}}</td>
+              <td>&nbsp;<button (click)="removieMovie(allfilms.movie)" class="btn btn-outline-danger mx-3">Delete</button></td>
+            </tr>
+           
+          </table>
+          
+    </div>
+      

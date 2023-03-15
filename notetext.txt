@@ -1,0 +1,11 @@
+         MoviesApp 
+         ---------
+
+   Components:
+        1. dashboard
+        2. login
+        3. register
+        3. header
+        4. footer
+        5. side-navbar
+              

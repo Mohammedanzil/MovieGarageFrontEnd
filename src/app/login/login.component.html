@@ -1,0 +1,26 @@
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form (ngSubmit)="login()" [formGroup]="loginForm" action="">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input name="name"  formControlName="email" class="email" type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div *ngIf="this.loginForm.get('email')?.errors&&this.loginForm.get('email')?.touched" class="text-danger">Invalid Email</div>
+                <div class="inputbox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input name="pswd" formControlName="pswd" type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched" class="text-danger">Invalid Password</div>
+                <div class="text-danger">{{errorMsg}}</div>
+                <button >Log-In</button>
+                <div class="register">
+                    <p>Don't have a Account <a routerLink="/Click-On/register">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

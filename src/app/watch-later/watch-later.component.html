@@ -1,0 +1,42 @@
+<!-- empty watchlater -->
+<div  *ngIf="watchlaterStatusMsg" class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <!-- empty watchlater image -->
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzBjMWVlNWZiNTQ0MGQyZjg0NTgzMTY0Y2FmOGYzMGIwMDRkYTZhZSZjdD1z/fXbogjx5ha7mYo9wDJ/giphy.gif" alt="">
+            <h3>Your Theater is Empty</h3>
+            <button routerLink="" class="btn btn-info mb-5">Add Now</button>
+        </div>
+    </div>
+</div>
+
+
+<!--watchlater Section-->
+<section *ngIf="!watchlaterStatusMsg" class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let movie of watchlater"  class="col mb-5">
+                <div class="card h-100 p-3">
+                    <!-- movie image-->
+                    <img height="200px" class="card-img-top" [src]="movie.image" alt="..." />
+                    <!-- movie details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- movie name-->
+                            <h5 class="fw-bolder">{{movie.movie}}</h5>
+                            <!-- movie price-->
+                            <p>Director : {{movie.dirc}}</p>
+                            <p>Duration : {{movie.time}}</p>
+                        </div>
+                    </div>
+                    <!-- movie actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div>
+                            <button (click)="removeItem(movie.movie)" style="float:left" class="text-danger btn"><i class="fa-solid fa-trash fa-fade fa-2x"></i></button>
+                            <button style="float: right; border: 1px solid;" class="btn btn-outline-success mt-auto"><a href="https://www.youtube.com/results?search_query=english+movie">Watch Now </a></button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,61 @@
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form (ngSubmit)="addItem()" [formGroup]="addForm" action="">
+                <h2>Add New Movie</h2>
+                <div class="inputbox">
+                    <i class="fa-solid fa-film"></i>
+                    <input name="name"  formControlName="movie"  type="text" required>
+                    <label for="">Movie Name</label>
+                </div>
+                <div *ngIf="this.addForm.get('movie')?.errors&&this.addForm.get('movie')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-clapperboard"></i>
+                    <input name="director"  formControlName="dirc" type="text" required>
+                    <label for="">Director</label>
+                </div>
+                <div *ngIf="this.addForm.get('dirc')?.errors&&this.addForm.get('dirc')?.touched" class="text-danger">Please Enter Proper Detailsl</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-camera"></i>
+                    <input name="actors"  formControlName="actor" type="text" required>
+                    <label for="">Actors</label>
+                </div>
+                <div *ngIf="this.addForm.get('actor')?.errors&&this.addForm.get('actor')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                    <input name="cat"  formControlName="cat" type="text" required>
+                    <label for="">Category</label>
+                </div>
+                <div *ngIf="this.addForm.get('cat')?.errors&&this.addForm.get('cat')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-comment-medical"></i>
+                    <input name="about"  formControlName="desc" type="text" required>
+                    <label for="">Description</label>
+                </div>
+                <div *ngIf="this.addForm.get('desc')?.errors&&this.addForm.get('desc')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-clock"></i>
+                    <input name="time"  formControlName="time" type="text" required>
+                    <label for="">Duration</label>
+                </div>
+                <div *ngIf="this.addForm.get('time')?.errors&&this.addForm.get('time')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <input name="image"  formControlName="image" type="text" required>
+                    <label for="">Image</label>
+                </div>
+                <div *ngIf="this.addForm.get('image')?.errors&&this.addForm.get('image')?.touched" class="text-danger">Please Enter Proper Details</div>
+
+                <button>Add Movie</button>
+                
+            </form>
+        </div>
+    </div>
+</section>

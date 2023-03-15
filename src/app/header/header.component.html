@@ -1,0 +1,41 @@
+<!-- navBar  -->
+<nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container ">
+      
+      <a class="navbar-brand " href="#">
+        <img src="https://media0.giphy.com/media/KCSN2LLXF83n6Tf0F6/giphy.gif?cid=6c09b952aa8a0c4cf6ccfc6c73530a9f52736aa929391c9e&rid=giphy.gif&ct=s"
+         width="50px" height="50px" alt=""><span class="name">Movie-Garage</span ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-sliders"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Click-On/login">Login</a>
+          </li>&nbsp;&nbsp;
+          
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="Click-On/register">Register</a>
+          </li>&nbsp;&nbsp;&nbsp;
+          
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" routerLink="Click-On/watch-later">Watch Later</a>
+          </li>&nbsp;&nbsp;
+          <li class="nav-item">
+            <button class="nav-link " aria-current="page" routerLink="Click-On/Admin-login">Admin Log</button>
+          </li>&nbsp;&nbsp;
+
+
+          
+        </ul>
+        
+        <div class="dropdown">
+          <button class="logout"  aria-current="page" ><i class="fa-solid fa-power-off"></i>Log-out</button>
+          <div class="dropdown-content">
+            <a (click)="logout()">Log-out</a>
+            <a (click)="Adlogout()"> Admin Log-out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

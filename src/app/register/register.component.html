@@ -1,0 +1,40 @@
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form (ngSubmit)="register()" [formGroup]="registerForm" action="">
+                <h2>Register Form</h2>
+                <div class="inputbox">
+                    <i class="fa-solid fa-user"></i>
+                    <input name="name"  formControlName="name"  type="text" required>
+                    <label for="">Full Name</label>
+                </div>
+                <div *ngIf="this.registerForm.get('name')?.errors&&this.registerForm.get('name')?.touched" class="text-danger">Invalid name</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input name="email"  formControlName="email" type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div *ngIf="this.registerForm.get('email')?.errors&&this.registerForm.get('email')?.touched" class="text-danger">Invalid email</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-phone"></i>
+                    <input name="mob"  formControlName="mob" type="number" required>
+                    <label for="">Ph no:</label>
+                </div>
+                <div *ngIf="this.registerForm.get('mob')?.errors&&this.registerForm.get('mob')?.touched" class="text-danger">Invalid mobile number</div>
+
+                <div class="inputbox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input name="pswd"  formControlName="pswd" type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched" class="text-danger">Invalid Password</div>
+
+                
+                <button>Register</button>
+                
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+<!-- Section-->
+<div class="main-container ">
+    <div  class="sidebar" id="side_nav">
+          <div class=" navbar-collapse" >
+            <div class="navbar-nav mb-lg-0 ms-auto">
+                <div class="header-box px-3 pt-3 pb-4">
+                    <h1 class="nav-item fs-4"><span class="bg-white text-dark rounded shadow cls me-2">Movies</span> <span class="cls text-white">Collections</span></h1>
+                    <hr class="nav-item text-white">
+                   
+                </div>
+                <p class="cls">“If a Writer births the baby, then a Producer raises the child and sends it off to school.” <br>
+                    ― Rona Edwards, I Liked It, Didn't Love It: Screenplay Development from the Inside Out”</p>
+                <img class="nav-link" src="https://thumbs.dreamstime.com/b/film-reel-icon-isolated-black-background-simple-vector-logo-film-reel-icon-isolated-black-background-163614875.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="content">
+            <section class="py-5">
+                <h1 class="text-center mt-5" >Welcome To Movie-Garage</h1>
+                <hr>
+              
+                <div class="container px-4 px-lg-5 mt-5 me-5">
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                        <div class="col mb-5" *ngFor="let allfilms of allfilm  ">
+                            <div class="card h-100 p-3">
+                                <!-- Product image-->
+                                <img height="200px" class="card-img-top" [src]="allfilms.image" alt="product.title" />
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">{{allfilms.movie}}</h5>
+                                        <!-- Product price-->
+                                      <span class="text-dark">Director: {{allfilms.dirc}}</span>
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a  routerLink="/Click-On/view-more/{{allfilms.movie}}" class="btn btn-outline-dark mt-auto" >View More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+        </div>
+
+
+
+   
+    
+
+
+
+

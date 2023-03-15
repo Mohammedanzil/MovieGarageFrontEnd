@@ -1,0 +1,29 @@
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row mt-5 gx-4 gx-lg-5 align-items-center" >
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 w-75" [src]="viewMovie.image" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small fw-bolder mb-1"><h4>Movie Name :</h4></div>
+                <h3 class="display fw-bolder">{{viewMovie.movie}}</h3>
+                <div class="fs-5 mb-5">
+                    <h4>Direction :</h4>
+                    <span>{{viewMovie.dirc}}</span>
+                    <h4>Actors :</h4>
+                    <span>{{viewMovie.actor}}</span>
+                </div>
+                <p class="fw-bolder">About Movie :</p>
+                <p class="lead ">{{viewMovie.desc}}</p>
+                
+                <div class="d-flex">
+                    
+                    <button style="float: right; border: 1px solid;" class="btn btn-outline-success mt-auto"><a href="https://www.youtube.com/results?search_query=english+movie">Watch Now </a></button>
+                    <button  (click)="addwatchLater(viewMovie)" class="btn btn-outline-danger flex-shrink-0 ms-3" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to Watch Later 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
